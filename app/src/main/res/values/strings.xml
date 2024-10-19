@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">OmikujiApp</string>
+
+    <string name="start">おみくじを引く</string>
+
 </resources>
+
