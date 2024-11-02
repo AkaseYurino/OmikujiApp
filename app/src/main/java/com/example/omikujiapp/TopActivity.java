@@ -35,11 +35,17 @@ public class TopActivity extends AppCompatActivity {
             public void onClick(View view) {
                 //スタートボタンタップ処理
                 //TODO：おみくじの抽選を実行
-                Random randomGenerator = new Random();
-                int resultNum = randomGenerator.nextInt(ResultActivity.OMIKUJI_MAX_NUMBER);
+//                Random randomGenerator = new Random();
+//                int resultNum = randomGenerator.nextInt(ResultActivity.OMIKUJI_MAX_NUMBER);
+
+                //乱数生成
+                Random random = new Random();
+
+                //1～100の中のどれかを取得。NextInt(100)だと0～99になるのでプラス1する。
+                int number = random.nextInt(100) + 1;
 
                 //結果画面に遷移
-                startActivity(ResultActivity.newIntent(TopActivity.this, resultNum));
+                startActivity(ResultActivity.newIntent(TopActivity.this, number));
 
             }
         });
